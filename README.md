@@ -1,3 +1,23 @@
+# Project Laravel - Landing Page + Custom 404
+
+## Deskripsi
+Project ini merupakan pengembangan dari landing page dengan tambahan custom 404 page.
+
+---
+
+## Custom 404 Page
+- Lokasi: resources/views/errors/404.blade.php
+- Aset gambar:
+  - public/peti.png
+  - public/shape.png
+
+---
+
+## Landing Page
+- Lokasi: resources/views/landingpage.blade.php
+
+---
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
