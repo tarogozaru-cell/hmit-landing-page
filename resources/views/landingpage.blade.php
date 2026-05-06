@@ -25,7 +25,6 @@
             padding: 0 20px;
         }
 
-        /* NAVBAR */
         nav {
             background: rgba(255, 255, 255, 0.95);
             position: fixed;
@@ -84,7 +83,6 @@
             background: #c2410c;
         }
 
-        /* HERO */
         .hero {
             background: linear-gradient(rgba(234, 88, 12, 0.75), rgba(251, 146, 60, 0.5)),
                         url("{{ asset('foto.jpeg') }}") center/cover no-repeat;
@@ -109,7 +107,6 @@
             padding: 90px 0;
         }
 
-        /* CARD */
         .card {
             background: white;
             padding: 30px;
@@ -120,6 +117,21 @@
 
         .card:hover {
             transform: translateY(-8px);
+        }
+
+        .clickable-card {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        .clickable-card .card {
+            cursor: pointer;
+        }
+
+        .clickable-card .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(234, 88, 12, 0.18);
         }
 
         .icon-circle {
@@ -134,7 +146,6 @@
             margin: 0 auto 15px;
         }
 
-        /* CTA */
         .cta {
             background: linear-gradient(to right, #ea580c, #fb923c);
             color: white;
@@ -142,7 +153,6 @@
             padding: 80px 0;
         }
 
-        /* FOOTER */
         .footer {
             background: #1f2937;
             color: #9ca3af;
@@ -154,11 +164,10 @@
 
 <body>
 
-<!-- NAVBAR -->
 <nav>
     <div class="container nav-content">
         <div class="logo">
-            <img src="{{ asset('hmit.jpeg') }}" alt="Logo HMIT" style="heigth:45px;">
+            <img src="{{ asset('hmit.jpeg') }}" alt="Logo HMIT" style="height:45px;">
             <span>HMIT</span>
         </div>
 
@@ -166,13 +175,13 @@
             <a href="#tentang">Tentang</a>
             <a href="#program">Program</a>
             <a href="#kontak">Kontak</a>
+            <a href="/aspirasi">Aspirasi</a>
         </div>
 
         <a href="#kontak" class="btn btn-primary">Hubungi</a>
     </div>
 </nav>
 
-<!-- HERO -->
 <section class="hero">
     <div class="container">
         <h1>Himpunan Mahasiswa Informatika</h1>
@@ -183,7 +192,6 @@
     </div>
 </section>
 
-<!-- TENTANG -->
 <section id="tentang" class="section" style="background:#f8fafc;">
     <div class="container">
         <h2>Tentang HMIT</h2>
@@ -193,7 +201,6 @@
     </div>
 </section>
 
-<!-- PROGRAM -->
 <section id="program" class="section">
     <div class="container">
         <h2>Program Kerja</h2>
@@ -218,11 +225,18 @@
                 <p>Lomba dan hackathon mahasiswa.</p>
             </div>
 
+            <a href="/aspirasi" class="clickable-card">
+                <div class="card">
+                    <div class="icon-circle"><i class="fas fa-comments"></i></div>
+                    <h3>Aspirasi Mahasiswa</h3>
+                    <p>Sampaikan kritik dan saran untuk kemajuan HMIT.</p>
+                </div>
+            </a>
+
         </div>
     </div>
 </section>
 
-<!-- CTA -->
 <section class="cta">
     <div class="container">
         <h2 style="color:white;">Gabung Bersama Kami</h2>
@@ -231,7 +245,6 @@
     </div>
 </section>
 
-<!-- FOOTER -->
 <footer id="kontak" class="footer">
     <div class="container">
         <h3 style="color:white;">HMIT</h3>

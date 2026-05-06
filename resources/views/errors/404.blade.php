@@ -20,7 +20,7 @@ body {
     align-items: center;
 }
 
-/* flow vertikal aman */
+/* flow vertikal */
 .content {
     display: flex;
     flex-direction: column;
@@ -105,7 +105,6 @@ body {
             <span class="four">4</span>
 
             <div class="image-wrapper">
-                <!-- pastikan file ada di public/ -->
                 <img src="{{ asset('shape.png') }}" class="shape">
                 <img src="{{ asset('peti.png') }}" class="peti">
             </div>
