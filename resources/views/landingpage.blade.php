@@ -72,6 +72,7 @@
             border-radius: 50px;
             text-decoration: none;
             font-weight: 600;
+            transition: 0.3s;
         }
 
         .btn-primary {
@@ -81,6 +82,17 @@
 
         .btn-primary:hover {
             background: #c2410c;
+        }
+
+        .btn-light {
+             background: white;
+             color: #ea580c;
+        }
+
+        .btn-light:hover {
+             background: #f3f4f6;
+             color: #c2410c;
+             transform: translateY(-2px);
         }
 
         .hero {
@@ -151,6 +163,7 @@
             color: white;
             text-align: center;
             padding: 80px 0;
+            
         }
 
         .footer {
@@ -176,6 +189,8 @@
             <a href="#program">Program</a>
             <a href="#kontak">Kontak</a>
             <a href="/aspirasi">Aspirasi</a>
+            <a href="/pendaftaran">Pendaftaran</a>
+            <a href="{{ route('login') }}">Login</a>
         </div>
 
         <a href="#kontak" class="btn btn-primary">Hubungi</a>
@@ -241,7 +256,7 @@
     <div class="container">
         <h2 style="color:white;">Gabung Bersama Kami</h2>
         <p style="margin:20px 0;">Jadilah bagian dari HMIT dan kembangkan potensimu</p>
-        <a href="#" class="btn" style="background:white; color:#ea580c;">Daftar</a>
+        <a href="/pendaftaran" class="btn btn-light">Daftar</a>
     </div>
 </section>
 

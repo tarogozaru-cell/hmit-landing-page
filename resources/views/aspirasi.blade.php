@@ -71,13 +71,22 @@
         height:auto;
         object-fit:contain;
         transform:translateY(60px);
-        filter:brightness(1.1) contrast(1.1) drop-shadow(0 20px 45px rgba(0,0,0,0.35));
+
+        filter:
+        brightness(1.01)
+        contrast(1.01)
+        saturate(1.01)
+        drop-shadow(0 14px 22px rgba(0,0,0,0.14));
+        opacity:0.985;
+        mix-blend-mode:normal;
+        
     }
 
     .left-content{
-        flex:0.7;
+        flex:0.8;
         position:relative;
         z-index:2;
+        transform:translateX(20px);
     }
 
     .left-content h1{
@@ -150,14 +159,16 @@
         border:none;
         background:#ea580c;
         color:white;
-        border-radius:12px;
-        font-size:16px;
+        border-radius:14px;
+        font-size:15px;
         cursor:pointer;
-        font-weight:600;
+        font-weight:700;
+        transition:.3s;
     }
 
     button:hover{
         background:#c2410c;
+        transform:translatey(-2px);
     }
 
     .back{
@@ -167,12 +178,22 @@
         text-decoration:none;
         color:#ea580c;
         font-weight:600;
+        transition:.3s;
     }
 
-    .success{
-        color:green;
-        margin-bottom:15px;
+    .back:hover{
+        color:#c2410c;
     }
+
+    .form-box .success{
+        background:#ecfdf5;
+        color:#15803d;
+        border:1px solid #86efac;
+        padding:12px;
+        border-radius:10px;
+        margin-bottom:18px;
+        font-weight:600;
+}
 
     @media(max-width:900px){
         .wrapper{
@@ -223,7 +244,7 @@
         <p>Sampaikan pendapatmu untuk kemajuan organisasi.</p>
 
         @if(session('success'))
-            <p class="success">{{ session('success') }}</p>
+            <p class="success">✅{{ session('success') }}</p>
         @endif
 
         <form action="/aspirasi" method="POST">
